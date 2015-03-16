@@ -1,1 +1,1 @@
-# Psst is a clone of Twitter
+# Psst is a clone of Twitter, but with a twist 150 characters per post
