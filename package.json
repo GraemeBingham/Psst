@@ -1,0 +1,11 @@
+{
+  "name": "Psst",
+  "version": "0.0.1",
+  "description": "A project to replicate twitter",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "Graeme Bingham",
+  "license": "ISC"
+}
