@@ -19,6 +19,10 @@ gulp.task('compass', function() {
       .pipe(gulp.dest('builds/development/css'))
 });
 
-gulp.task('defult',['tasks'], function() {
-    // content
+gulp.task('watch', function() {
+    gulp.watch('components/sass/*.scss', ['compass']);
+});
+
+gulp.task('defult',['compass'], function() {
+    
 });
