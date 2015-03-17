@@ -6,17 +6,17 @@ gulp.task('log', function() {
     gutil.log('Workflows are awesome!')
 });
 
-var sassSources = ['components/sass/style.scss']
+var sassSources = ['components/sass/style.scss'];
 
 gulp.task('compass', function() {
-    gulp.src('sassSources')
+    gulp.src(sassSources)
       .pipe(compass({
       	sass: 'components/sass',
       	image: 'builds/development/images',
       	style: 'expanded' 
       }))
       .on('error', gutil.log)
-      .pipe(gulp.dest('builds/development/css'));
+      .pipe(gulp.dest('builds/development/css'))
 });
 
 gulp.task('defult',['tasks'], function() {
