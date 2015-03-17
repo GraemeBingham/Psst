@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
 	gutil = require('gulp-util'),
-	compass = require('gulp-compass');
+	compass = require('gulp-compass'),
+	connect = require('gulp-connect');
 
 gulp.task('log', function() {
     gutil.log('Workflows are awesome!')
@@ -17,12 +18,20 @@ gulp.task('compass', function() {
       }))
       .on('error', gutil.log)
       .pipe(gulp.dest('builds/development/css'))
+      .pipe(connect.reload())
 });
 
 gulp.task('watch', function() {
     gulp.watch('components/sass/*.scss', ['compass']);
 });
 
-gulp.task('defult',['compass'], function() {
+gulp.task('connect', function() {
+    connect.server({
+    	root: 'builds/development/',
+    	livereload: true
+    })
+});
+
+gulp.task('default',['compass', 'connect', 'watch'], function() {
     
 });
