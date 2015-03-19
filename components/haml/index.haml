@@ -10,19 +10,30 @@
 					%ul
 						%li
 							%a{ href: "index.html"}
-								%h2 Home
+								Home
 						%li
 							%a{ href: "all-posts.html"}
-								%h2 All psst
+								All psst
 						%li
 							%a{ href: "users.html"}
-								%h2 Users
+								Users
 						%li
 							%a{ href: "about.html"}
-								%h2 About
+								About
+				%section
+					%form.login
+						%label{ :for=> "username"}
+						%input{ type: "text", name:"username", placeholder: "Username"}
+						%label{ :for=> "password"}
+						%input{ type: "password", name:"password", placeholder: "Password"}
+						%input{ type: "submit", value: "Login"}
 		.wrapper
 			%aside
-				.profile-pic
+				.profile
+					.profile-header
+						@Steve
+					.profile-pic
+						%img(src="/images/loading.gif")
 			%section
 				.content
 					%div.post-head
