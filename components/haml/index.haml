@@ -4,10 +4,11 @@
 		%link{:type => "text/css", :rel => "stylesheet", :href => "/css/style.css"}
 		%script(src="/js/scripts.js")
 		%script(src="/js/classie.js")
+		%link{:type => "text/css", :rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Raleway:400,700,900"}
 	%body
 		%header
-			%section.wrapper
-				%logo
+			.wrapper
+				.logo
 					%h1 Psst.
 				%nav
 					%ul
@@ -23,29 +24,157 @@
 						%li
 							%a{ href: "about.html"}
 								About
-				%section
-					%form.login
-						%label{ :for=> "username"}
-						%input{ type: "text", name:"username", placeholder: "Username"}
-						%label{ :for=> "password"}
-						%input{ type: "password", name:"password", placeholder: "Password"}
-						%input{ type: "submit", value: "Login"}
+				%form
+					%label{ :for=> "username"}
+					%input{ type: "text", name:"username", class: "placeholder", placeholder: "Username"}
+					%label{ :for=> "password"}
+					%input{ type: "password", name:"password", class: "placeholder", placeholder: "Password"}
+					%input{ type: "submit", value: "Login"}
 		.wrapper
-			%aside
-				.profile
-					.profile-head
-						@Steve
-					.profile-pic
-						%img(src="/images/loading.gif")
-			%section
-				.content
-					%div.post-head
-						.user
+			.container
+				%section
+					.content
+						%div.post-head
+							.user
+								@Jamila.montes 
+							.time
+								12m
+						%div.post-content
+							.post
+								This is pretty awesome ^^
+					.spacer
+					.content
+						%div.post-head
+							.user
+								@Stefan.olczak
+							.time
+								35m 
+						%div.post-content
+							.post
+								Oh no maybe I shouldn't give out my student id to people.
+					.spacer
+					.content
+						%div.post-head
+							.user
+								@Stefan.olczak
+							.time
+								57m 
+						%div.post-content
+							.post
+								Slowly improving since 1992
+					.spacer
+					.content
+						%div.post-head
+							.user
+								@Steve
+							.time
+								2h 
+						%div.post-content
+							.post
+								Good try but I did protect against code injection attacks.
+					.spacer
+					.content
+						%div.post-head
+							.user
+								@Arun
+							.time
+								3h 
+						%div.post-content
+							.post
+								"Don't you hate code that's not properly indented? Making it part of the syntax guarantees that all code is properly indented!" -- Guido van Rossum
+					.spacer
+					.content
+						%div.post-head
+							.user
+								@Bob
+							.time
+								6h 
+						%div.post-content
+							.post
+								Hello there. Thanks for the follow. Did you notice, that I'm an egg? A talking egg? Damn!
+					.spacer
+					.content
+						%div.post-head
+							.user
+								@Jim
+							.time
+								1d 
+						%div.post-content
+							.post
+								Yeah that's crazy, but people can change their own picture and build their own Twitter conversation with this generator, so it doesn't matter that you are an egg
+					.spacer
+					.content
+						%div.post-head
+							.user
+								@Bob
+							.time
+								2d 
+						%div.post-content
+							.post
+								Thanks mate! Feel way better now. Oh, and guys, these messages will be removed once your add your own :-)
+					.spacer
+					.content
+						%div.post-head
+							.user
+								@Tim
+							.time
+								5d 
+						%div.post-content
+							.post
+								Oh wait i forgot this Apple folks have a long the companion app after a 'live video button for the dark.
+					.spacer
+					.content
+						%div.post-head
+							.user
+								@Kat
+							.time
+								7d 
+						%div.post-content
+							.post
+								This interview is scarily accurate Apparently in 1933 http:/… Happy early … Finally trying thanks to?
+					.spacer
+					.content
+						%div.post-head
+							.user
+								@Toby
+							.time
+								8d 
+						%div.post-content
+							.post
+								I have tonight off so if anyone's free let's go somewhere and look at our phones together.
+					.spacer
+					.content
+						%div.post-head
+							.user
+								@Bob
+							.time
+								9d 
+						%div.post-content
+							.post
+								Sometimes Google should just come back with a message that says "trust me, you don't want to know."
+					.spacer
+					.content
+						%div.post-head
+							.user
+								@Toby
+							.time
+								10d 
+						%div.post-content
+							.post
+								Hey, has anyone heard anything in the news about iTunes today? I'm a little worried about them...they haven't told me there's an update available yet today.
+					.spacer
+					.content
+						%div.post-head
+							.user
+								@Steve
+							.time
+								12d 
+						%div.post-content
+							.post
+								Welcome to Psst! You can login with the first part of your email address and student ID as password. Send messages to
+				%aside
+					.profile
+						.profile-head
 							@Steve
-						.time
-							12d 
-					%div.post-content
-						.post
-							Welcome to Psst! You can login with the first part of your email address and student ID as password. Send messages to
-		%footer
-			%h5 Copyright 2015
+						.profile-pic
+							%img(src="/images/profile.jpeg")
