@@ -1,0 +1,37 @@
+%html
+	%head
+		%title Psst homepage
+		%link{:type => "text/css", :rel => "stylesheet", :href => "/css/style.css"}
+		%script(src="/js/scripts.js")
+	%body
+		%header
+			%section.wrapper
+				%nav
+					%ul
+						%li
+							%a{ href: "index.html"}
+								%h2 Home
+						%li
+							%a{ href: "all-posts.html"}
+								%h2 All psst
+						%li
+							%a{ href: "users.html"}
+								%h2 Users
+						%li
+							%a{ href: "about.html"}
+								%h2 About
+		.wrapper
+			%aside
+				.profile-pic
+			%section
+				.content
+					%div.post-head
+						.user
+							@Steve
+						.time
+							12d 
+					%div.post-content
+						.post
+							Welcome to Psst! You can login with the first part of your email address and student ID as password. Send messages to
+		%footer
+			%h5 Copyright 2015

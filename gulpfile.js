@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
 	gutil = require('gulp-util'),
 	compass = require('gulp-compass'),
-	connect = require('gulp-connect');
+	connect = require('gulp-connect'),
+	haml = require('gulp-ruby-haml');
 
 gulp.task('log', function() {
     gutil.log('Workflows are awesome!')
@@ -23,6 +24,7 @@ gulp.task('compass', function() {
 
 gulp.task('watch', function() {
     gulp.watch('components/sass/*.scss', ['compass']);
+    gulp.watch('components/haml/*.haml', ['haml']);
 });
 
 gulp.task('connect', function() {
@@ -32,6 +34,13 @@ gulp.task('connect', function() {
     })
 });
 
-gulp.task('default',['compass', 'connect', 'watch'], function() {
+gulp.task('haml', function() {
+	gulp.src('components/haml/*.haml')
+	      .pipe(haml())
+	      .pipe(gulp.dest('builds/development/'))
+	      .pipe(connect.reload())    
+});
+
+gulp.task('default',['compass', 'haml' ,'connect', 'watch'], function() {
     
 });
